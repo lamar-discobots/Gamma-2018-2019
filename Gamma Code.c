@@ -66,10 +66,12 @@ task autonomous()
 	motor[Right]=127;
 	motor[Left]=127;
 	motor[Claw]=-127;
+
 	wait10Msec (5);
+	//
 	motor[Right]=0;
 	motor[Left]=0;
-	motor[Claw]=-0;
+	motor[Claw]=0;
 	wait10Msec(0);
 }
 
