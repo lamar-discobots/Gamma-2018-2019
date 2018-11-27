@@ -65,7 +65,10 @@ task autonomous()
 {
 	motor[Right]=127;
 	motor[Left]=127;
+	// go forward
+
 	motor[Claw]=-127;
+<<<<<<< HEAD
 
 	wait10Msec (5);
 	//
@@ -73,6 +76,18 @@ task autonomous()
 	motor[Left]=0;
 	motor[Claw]=0;
 	wait10Msec(0);
+=======
+	// intake drops
+
+	wait10Msec (5);
+	//wait one twentieth of a second or 0.05 or 50 ms
+
+	motor[Right]=0;
+	motor[Left]=0;
+	motor[Claw]=0;
+	// all motors stop
+
+>>>>>>> master
 }
 
 /*---------------------------------------------------------------------------*/
