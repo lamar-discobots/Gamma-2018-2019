@@ -86,15 +86,6 @@ task autonomous()
 	motor[Claw]= 0;
 	//claw stop
 
-	motor[Lift]= -127;
-	//lift goes down
-
-	wait1Msec (750);
-	//wait .75 seconds
-
-	motor[Lift]= 0;
-	//lift stop
-
 	motor [Claw] = -127;
 	//claw go down
 
@@ -103,36 +94,34 @@ task autonomous()
 
 	motor [Claw] = 0;
 
-	motor[Right] = -127;
+/*motor[Right] = -127;
 	motor[Left] = 127;
 	motor[Claw] = 127;
 	wait1Msec(250);
-	//right, left, and claw motor wait .25 seconds
+	right, left, and claw motor wait .25 seconds */
 
 	motor[Right] = 0;
 	motor[Left] = 0;
 	motor[Claw] = 0;
 	//right & left motor off, claw wait .15 secods the shuts off
 
-	motor[Left] = 127;
-	motor[Right] = 127;
+	motor[Left] = -127;
+	motor[Right] = -127;
 	wait1Msec (1000);
+	motor[Claw] = 127;
+	wait1Msec (500);
 	// left & right motors run for 1 second
 	//turn 90 degrees
-
-	motor[Left] = 0;
-	motor[Right] = 0;
-	//motors shut off
-
+	motor[Claw] = 0;
 	motor[Left] = 127;
-	motor[Right] = -127;
 	//go forward 1
 
-  wait1Msec (1250);
-  //wait 1.25 second
+  wait1Msec (1000);
+  //wait 1 second
 
   motor[Left] = 0;
 	motor[Right] = 0;
+
   //all motors turn off
 }
 
