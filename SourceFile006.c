@@ -111,7 +111,6 @@ task autonomous()
 
 	motor[Right] = 0;
 	motor[Left] = 0;
-	wait1Msec (150);
 	motor[Claw] = 0;
 	//right & left motor off, claw wait .15 secods the shuts off
 
